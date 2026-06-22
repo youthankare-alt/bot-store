@@ -6,5 +6,5 @@ node_compat = false
 
 [[d1_databases]]
 binding = "DB"
-database_name = "store-db"
+database_name = "bot-store-db2"
 database_id = "0aae00c6-022a-4c33-a170-b95afd447680"
