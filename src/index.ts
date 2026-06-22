@@ -9,7 +9,7 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 app.use('*', cors({
   origin: [
-    'https://bot-store-pg.pages.dev/', // Domain default Cloudflare Pages
+    'https://985b7632.bot-store-pg.pages.dev', // Domain default Cloudflare Pages
     'http://localhost:3000' // Untuk testing lokal nanti
   ],
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
