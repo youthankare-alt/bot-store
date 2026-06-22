@@ -10,7 +10,7 @@ const app = new Hono<{ Bindings: Bindings }>();
 // ✅ CORS FINAL: Izinkan SEMUA origin sementara untuk debugging
 // Nanti bisa dipersempit setelah semuanya jalan
 app.use('*', cors({
-  origin: '*',
+  origin: 'https://bot-store-pg.pages.dev',
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
   maxAge: 86400,
