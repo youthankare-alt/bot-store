@@ -1,0 +1,10 @@
+name = "telegram-store-bot"
+main = "src/index.ts"
+compatibility_date = "2024-05-12"
+# PENTING: Matikan node_compat agar tidak kena pajak CPU polyfill
+node_compat = false 
+
+[[d1_databases]]
+binding = "DB"
+database_name = "store-db"
+database_id = "0aae00c6-022a-4c33-a170-b95afd447680"
