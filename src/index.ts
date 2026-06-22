@@ -7,7 +7,15 @@ import type { Bindings } from './types';
 
 const app = new Hono<{ Bindings: Bindings }>();
 
-app.use('*', cors());
+app.use('*', cors({
+  origin: [
+    'https://bot-store-pg.pages.dev/', // Domain default Cloudflare Pages
+    'http://localhost:3000' // Untuk testing lokal nanti
+  ],
+  allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 // 1. Public Webhook (High Traffic, Ultra-Low Latency)
 app.post('/webhook', webhookHandler);
